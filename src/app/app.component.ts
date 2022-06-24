@@ -13,10 +13,9 @@ export class AppComponent {
 
   ngOnInit() {
     this.empForm = this.fb.group({
-      firstName:'',
-      lastName:'',
       employees: this.fb.array([])
     });
+    this.employees().push(this.newEmployee());
   }
 
   employees(): FormArray {
